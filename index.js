@@ -40,8 +40,8 @@ app.all('/player/login/dashboard', function (req, res) {
 });
 
 app.all('/player/growid/login/validate', (req, res) => {
-    const { _token, growId, pass, action } = req.body;
-    const token = (action === 'login' ? JSON.stringify({ server_name: _token.toUpperCase(), growId: growId, password: pass }) : JSON.stringify({ server_name: _token, growId: "", password: "" }));
+    const { _token, growId, password, action } = req.body;
+    const token = (action === 'login' ? JSON.stringify({ server_name: _token.toUpperCase(), growId: growId, password: password }) : JSON.stringify({ server_name: _token, growId: "", password: "" }));
     res.send(
         `{"status":"success","message":"Account Validated.","token":"${token}","url":"","accountType":"growtopia", "accountAge": 2}`,
     );
