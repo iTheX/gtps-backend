@@ -18,6 +18,10 @@ Tutorial:
 
 You can contact me at teleram my username is [@ReallBoyy](https://t.me/reallboyy2_4) or ask the real owner [@yoruakio](https://t.me/yoruakio).
 
+## Support Redirect Server
+
+Tutorial will be released on 10/8/2025
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
