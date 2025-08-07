@@ -35,7 +35,12 @@ app.use(express.json());
 
 app.use(rateLimiter({ windowMs: 15 * 60 * 1000, max: 10000, headers: true }));
 
-app.all('/player/login/dashboard', function (req, res) {const tData = {};
+app.all("/player/validate/close", function (req, res) {
+  res.send("<script>window.close();</script>");
+});
+
+app.all('/player/login/dashboard', function (req, res) {
+    const tData = {};
     try {
         const uData = JSON.stringify(req.body).split('"')[1].split('\\n'); const uName = uData[0].split('|'); const uPass = uData[1].split('|');
         for (let i = 0; i < uData.length - 1; i++) { const d = uData[i].split('|'); tData[d[0]] = d[1]; }
