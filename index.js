@@ -13,6 +13,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.all("/player/validate/close", function (req, res) {
+  res.send("<script>window.close();</script>");
+});
+
 app.set('view engine', 'ejs');
 app.all('/player/login/dashboard', function (req, res) {
   res.render(__dirname + '/public/html/dashboard.ejs');
@@ -20,14 +24,10 @@ app.all('/player/login/dashboard', function (req, res) {
 
 // Endpoint login validate
 app.all('/player/growid/login/validate', (req, res) => {
-  // Contoh token statis tanpa mengambil dari body (bisa sesuaikan)
-  const token = JSON.stringify({ server_name: 'Growtopia Server', growId: "", password: "" });
-  const tokens = Buffer.from(token).toString('base64');
-
   res.json({
     status: "success",
     message: "Account Validated.",
-    token: tokens,
+    token: "GrowtopiaServerLoginToken",
     url: "",
     accountType: "growtopia",
     accountAge: 2
