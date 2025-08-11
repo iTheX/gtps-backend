@@ -24,15 +24,22 @@ app.all('/player/login/dashboard', function (req, res) {
 
 // Endpoint login validate
 app.all('/player/growid/login/validate', (req, res) => {
-  res.json({
-    status: "success",
-    message: "Account Validated.",
-    token: "GrowtopiaServerLoginToken",
-    url: "",
-    accountType: "growtopia",
-    accountAge: 2
-  });
+   res.send(
+        `{"status":"success","message":"Account Validated.","token":"GrowtopiaServerToken","url":"","accountType":"growtopia", "accountAge": 2}`,
+    );
 });
+
+app.all('/player/growid/checktoken', (req, res) => {
+    res.json({
+        status: 'success',
+        message: 'Account Validated.',
+        token: "GrowtopiaServerToken",
+        url: '',
+        accountType: 'growtopia',
+        accountAge: 2
+    });
+});
+
 
 // Root endpoint untuk cek server hidup
 app.get('/', (req, res) => {
