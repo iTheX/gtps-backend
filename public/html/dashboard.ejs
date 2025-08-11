@@ -29,21 +29,13 @@
 <body>
 
 <div class="login-container">
-  <h3 class="text-center mb-4">Log Into Your GTPSID</h3>
+  <h3 class="text-center mb-4">Growtopia Server Login</h3>
   <form method="POST" action="/player/growid/login/validate" class="" accept-charset="UTF-8" role="form" required="required" autocomplete="off">
     <div class="form-group">
-      <input type="text" name="_token" class="form-control" placeholder="Server Name *" required>
-    </div>
-    <div class="form-group">
-      <input type="text" name="growId" id="loginGrowId" class="form-control" placeholder="Your GrowID Name *" />
-    </div>
-
-    <div class="form-group">
-      <input type="password" name="password" id="loginPassword" class="form-control" placeholder="Your GrowID Password *" />
+      <input type="text" name="_token" class="form-control" placeholder="Server Name" required>
     </div>
 
     <input type="submit" name="action" value="login" id="loginBtn" class="btn btn-primary btn-block" />
-    <input type="submit" name="action" value="register" id="registerBtn" class="btn btn-secondary btn-block" />
 
   </form>
 </div>
