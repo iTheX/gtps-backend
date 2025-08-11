@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 app.all('/player/login/dashboard', function (req, res) {
-  res.render(__dirname + '/public/html/dashboard.ejs');
+  res.render(__dirname + '/public/html/dashboard.ejs', { data: {} });
 });
 
 // Endpoint login validate
