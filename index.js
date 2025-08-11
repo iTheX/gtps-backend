@@ -13,8 +13,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.set('view engine', 'ejs');
 app.all('/player/login/dashboard', function (req, res) {
-  res.render(__dirname + '/public/html/dashboard.ejs', { data: {} });
+  res.render(__dirname + '/public/html/dashboard.ejs');
 });
 
 // Endpoint login validate
