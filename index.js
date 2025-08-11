@@ -25,7 +25,7 @@ app.all('/player/login/dashboard', function (req, res) {
 // Endpoint login validate
 app.all('/player/growid/login/validate', (req, res) => {
    res.send(
-        `{"status":"success","message":"Account Validated.","token":"${tokens}","url":"","accountType":"growtopia", "accountAge": 2}`,
+        `{"status":"success","message":"Account Validated.","token":"GrowtopiaServerToken","url":"","accountType":"growtopia", "accountAge": 2}`,
     );
 });
 
