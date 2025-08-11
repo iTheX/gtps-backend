@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GTPSID Login</title>
-  <link rel="icon" href="https://s3.eu-west-1.amazonaws.com/cdn.growtopiagame.com/website/resources/assets/images/growtopia.ico" />
+  <title>Growtopia Server Login</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
   <style>
     html, body {
@@ -30,32 +28,13 @@
 
 <div class="login-container">
   <h3 class="text-center mb-4">Growtopia Server Login</h3>
+  
   <form method="POST" action="/player/growid/login/validate" class="" accept-charset="UTF-8" role="form" required="required" autocomplete="off">
-    <div class="form-group">
-      <input type="text" name="_token" class="form-control" placeholder="Server Name" required>
-    </div>
-
+    
     <input type="submit" name="action" value="login" id="loginBtn" class="btn btn-primary btn-block" />
-
+    
   </form>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-        const stored = localStorage.getItem("growId");
-        if (stored) document.getElementById("loginGrowId").value = stored;
-      });
-
-      // Toggle password visibility
-      document
-        .getElementById("toggleLogPassword")
-        .addEventListener("click", function () {
-          const pwdField = document.getElementById("loginPassword");
-          const isHidden = pwdField.type === "password";
-          pwdField.type = isHidden ? "text" : "password";
-          this.innerHTML = isHidden ? "CLOSE " : "OPEN ";
-        });
 </body>
 </html>
