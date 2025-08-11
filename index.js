@@ -72,7 +72,7 @@ app.all('/player/growid/checktoken', (req, res) => {
 });
 
 app.get('/', function (req, res) {
-   res.render(__dirname + '/public/html/dashboard.ejs', {data: tData});
+   res.render(__dirname + '/public/html/dashboard.ejs');
 });
 
 app.listen(5000, function () {
